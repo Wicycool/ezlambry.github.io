@@ -1,15 +1,18 @@
-/*body{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
     margin: 0;
-    background-color: lightgray;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
 }
 #header{
-    background-color: whitesmoke;
+    background-color: #F8F8F8;
     width: 100%;
     height: 60px;
     text-align: center;
     padding: 10px;
     position: fixed;
-    box-shadow: 0 0 4px black;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
 
 }
 #header-space{
@@ -18,8 +21,32 @@
 .header-logo{
     height: 60px;
 }
-#main{
-    margin-left: 100px;
-    width: calc(100% - 200px);
-    background-color: white;
-}*/
+#main,.main{
+    margin: auto;
+    max-width: 800px;
+    padding: 10px;
+}
+#banner{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* a styles */
+a:link {
+    color: deepskyblue;
+    text-decoration: none;
+}
+a:visited {
+    color: deepskyblue;
+    text-decoration: none;
+}
+a:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+a:active {
+    color: skyblue;
+    text-decoration: underline;
+}
