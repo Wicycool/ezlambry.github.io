@@ -3,6 +3,37 @@
     <head>
         <title>Ezlambry</title>
         <link rel="stylesheet" type="text/css" href="https://ezlambry.github.io/resources/css/style.css">
+        <style>
+            #gallery-container{
+                text-align: center;
+                
+            }
+            .gallery-box{
+                
+                width: calc(50% - 10px);
+                min-width: 300px;
+                margin: 5px;
+                height: 200px;
+                background-color: white;
+                display:inline-block;
+                font-size: 2em;
+                position: relative;
+                color: white;
+                font-weight: bold;
+                text-shadow: 1px 1px 8px #000000;
+                border-radius: 20px;
+                background-image: url('resources/shade.png'), var(--image);
+                background-size: cover, cover;
+                background-position: center;
+                
+            }
+            .gallery-box span{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
     </head>
     <body>
         <div id="header">
@@ -15,12 +46,18 @@
         <div id="header-space"></div>
         <div id="banner" style="background-image: url('https://ezlambry.github.io/resources/Ezlambry%20channel%20art.jpg');height: 300px"></div>
         <div id="main">
-            <h2>Welcome to Ezlambry's Website!</h2>
+            <h1>Welcome to Ezlambry's Website!</h1>
             <p>Now you're probably wondering: "Why does Ezlambry have a website?"
             <br>The answer is that he doesn't know. He just felt like making one! :P (cool, right?)</p>
             <p>So that's pretty much it! This website is still a work in progress, but eventually everything on the <a href="https://sites.google.com/view/ezlambry/">old Google Sites version</a> will be moved over. I hope you like it so far! :D</p>
             <p><a href="https://www.youtube.com/channel/UCrDdkZMtIGymSLoWsyWTBcA">Check out Ezlambry's YouTube channel</a> (he makes cool videos!)</p>
-            
+            <div id="gallery-container">
+                <h1>Check out some of my videos!</h1>
+                <a href="https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks"><div class=gallery-box style="--image: url('resources/gallery-images/default.jpg');"><span>EzStream</span></div></a><a href="https://www.youtube.com/channel/UCrDdkZMtIGymSLoWsyWTBcA/videos"><div class=gallery-box style="--image: url('resources/gallery-images/mariogalaxy1.jpg');">
+                <span>Videos</span></div></a><a href="https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl5NW1-am3BwbpfgQqz6V2jq"><div class=gallery-box style="--image: url('resources/gallery-images/nicekirb.jpg');">
+                <span>Memes</span></div></a>
+            </div>
+            <h6><a href="quicklinks/">want to go somewhere quick? use quicklinks</a></h6>
         </div>
     </body>
 </html>
