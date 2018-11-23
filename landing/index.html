@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Ezlambry</title>
+        <meta name="viewport" content="width=device-width, initial-scale=.5">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Open Sans', sans-serif;
+                background-color: white;
+            }
+            main{
+                margin: auto;
+                max-width: 1200px;
+                padding: 100px;
+            
+            }
+            .heading{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                font-size: 2em;
+            }
+            #section-2{
+                max-width: 1200px;
+                border-radius: 50px;
+                display: block; 
+                margin: auto;
+                background-color: #ff3333;
+                padding: 50px;
+                padding-top: 20px;
+                color: white;
+                margin-bottom: 50px;
+            }
+            #logo{
+                width:300px;
+            }
+            .yt-vid{
+                width: calc(50% - 13px);
+                height: 310px;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+            #social-medias img{
+                border-radius: 4px;
+                margin-right: 2px;
+                width: 32px;
+            }
+            #footer-text{
+                margin-top: 20px;
+                font-size: .6em;
+                color: darkgray;
+            }
+            @media only screen and (max-width: 1000px) {
+                
+                .yt-vid{
+                    width: 100%;
+                    height: 310px;
+                }
+            }
+            @media only screen and (max-width: 800px) {
+                main{
+                    padding: 50px;
+                }
+                #logo{
+                    width:250px;
+                }
+                #social-medias img{
+                border-radius: 4px;
+                margin-right: 2px;
+                width: 48px;
+            }
+            }
+        </style>
+        <script>
+            function getQueryVariable(variable)
+            {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i=0;i<vars.length;i++) {
+                    var pair = vars[i].split("=");
+                    if(pair[0] == variable){return pair[1];}
+                }
+                return(null);
+            }
+            function replaceWelcomeText(){
+                document.getElementById('welcome-text').innerHTML='Hello, person from ' + decodeURIComponent(getQueryVariable("from")) + '!';
+            }
+        </script>
+    </head>
+    <body onload="replaceWelcomeText()">
+        <main>
+            <img id="logo" src="../resources/ezlambry%20logo%20red.png" alt="Ezlambry">
+            <p id="welcome-text" class="heading"></p>
+            <p>Now you might be wondering who this person named Ezlambry is.<br>Ezlambry makes YouTube videos and streams of him playing a variety of different video games!<br>Most of the time he plays Nintendo games, but he sometimes plays other games too.</p><br>
+            <div id="section-2">
+                <p class="heading">Some of Ezlambry's videos!</p>
+                <iframe class="yt-vid" src="https://www.youtube.com/embed/PSk1CJSQKpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="yt-vid" src="https://www.youtube.com/embed/o0oqoMWOeVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="yt-vid" src="https://www.youtube.com/embed/60027MfyC-U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="yt-vid" src="https://www.youtube.com/embed/RagpWg19x2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="heading">Like my videos?</p>
+            <p>If you like my content, don't forget to subscribe to my channel on YouTube!</p>
+            <script src="https://apis.google.com/js/platform.js"></script><div class="g-ytsubscribe" data-channelid="UCrDdkZMtIGymSLoWsyWTBcA" data-layout="full" data-count="default"></div><br>
+            <p>You can also find me at these places:</p>
+            <div id="social-medias">
+                <a href="https://www.youtube.com/Ezlambry"><img src="youtube_social_square_red.png" alt="YouTube"></a>
+                <a href="https://twitter.com/Ezlambry"><img src="Twitter_Social_Icon_Square_Color.png" alt="Twitter"></a>
+                <a href="https://ezlambry.github.io/joindiscord"><img src="discord.png" alt="Discord"></a>
+                <a href="https://twitch.tv/ezlambry_"><img src="twitch.png" alt="Twitch"></a>
+                <a href="https://ezlambry.github.io"><img src="../resources/ez%20v3.1%20user%20icon.png" alt="Website"></a>
+            </div>
+            <p id="footer-text">Website designed by Ezlambry, 2018</p>
+        </main>
+    </body>
+</html>
