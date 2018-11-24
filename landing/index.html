@@ -90,7 +90,7 @@
             }
             function replaceWelcomeText(){
                 if (getQueryVariable("from") == null){
-                    document.getElementById('welcome-text').innerHTML='Hello, person!';
+                    document.getElementById('welcome-text').innerHTML='Hello!';
                 } else {
                     document.getElementById('welcome-text').innerHTML='Hello, person from ' + decodeURIComponent(getQueryVariable("from")) + '!';
                 }
@@ -101,7 +101,7 @@
     <body onload="replaceWelcomeText()">
         <div id="main">
             <img id="logo" src="../resources/ezlambry%20logo%20red.png" alt="Ezlambry">
-            <p id="welcome-text" class="heading">Hello, person!</p>
+            <p id="welcome-text" class="heading">Hello!</p>
             <p>Now you might be wondering who this person named Ezlambry is.<br>Ezlambry makes YouTube videos and streams of him playing a variety of different video games!<br>Most of the time he plays Nintendo games, but he sometimes plays other games too.</p><br>
             <div id="section-2">
                 <p class="heading">Some of Ezlambry's videos!</p>
