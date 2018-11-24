@@ -90,18 +90,30 @@
             }
             function replaceWelcomeText(){
                 if (getQueryVariable("from") == null){
-                    document.getElementById('welcome-text').innerHTML='Hello!';
+                    document.getElementById('welcome-text').innerHTML='Hello, person!';
                 } else {
                     document.getElementById('welcome-text').innerHTML='Hello, person from ' + decodeURIComponent(getQueryVariable("from")) + '!';
                 }
-                
+            }
+            function socialMedia(){
+                if (getQueryVariable("from") == null){
+                    var extra = document.getElementById('extra').innerHTML='Hello, person!';
+                    extra.parentNode.removeChild(extra);
+                } else {
+                    var i = document.createElement("img");
+                    var isImg = decodeURIComponent(getQueryVariable("src").match(/\.(jpeg|jpg|gif|png)$/) != null;
+                    if(isimg){
+                        i.setAttribute("src", decodeURIComponent(getQueryVariable("src"));
+                        extra.appendChild(i);
+                    }
+                }
             }
         </script>
     </head>
     <body onload="replaceWelcomeText()">
         <div id="main">
             <img id="logo" src="../resources/ezlambry%20logo%20red.png" alt="Ezlambry">
-            <p id="welcome-text" class="heading">Hello!</p>
+            <p id="welcome-text" class="heading">Hello, person!</p>
             <p>Now you might be wondering who this person named Ezlambry is.<br>Ezlambry makes YouTube videos and streams of him playing a variety of different video games!<br>Most of the time he plays Nintendo games, but he sometimes plays other games too.</p><br>
             <div id="section-2">
                 <p class="heading">Some of Ezlambry's videos!</p>
@@ -120,6 +132,7 @@
                 <a href="https://ezlambry.github.io/joindiscord"><img src="discord.png" alt="Discord"></a>
                 <a href="https://twitch.tv/ezlambry_"><img src="twitch.png" alt="Twitch"></a>
                 <a href="https://ezlambry.github.io"><img src="../resources/ez%20v3.1%20user%20icon.png" alt="Website"></a>
+                <a id="extra" href=""></a>
             </div>
             <p id="footer-text">Website designed by Ezlambry, 2018</p>
         </div>
