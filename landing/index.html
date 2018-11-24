@@ -3,6 +3,10 @@
     <head>
         <title>Ezlambry</title>
         <meta name="viewport" content="width=device-width, initial-scale=.5">
+        <meta property="og:title" content="Ezlambry">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://ezlambry.github.io/resources/ez%20v3.1%20user%20icon.png">
+        <meta property="og:description" content="Hi, I'm Ezlambry! I make videos and livestreams of me playing video games. I mostly play Nintendo games, but sometimes I play non-Nintendo games too!" />
         <style>
             @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
             body{
@@ -11,7 +15,7 @@
                 font-family: 'Open Sans', sans-serif;
                 background-color: white;
             }
-            main{
+            #main{
                 margin: auto;
                 max-width: 1200px;
                 padding: 100px;
@@ -60,7 +64,7 @@
                 }
             }
             @media only screen and (max-width: 800px) {
-                main{
+                #main{
                     padding: 50px;
                 }
                 #logo{
@@ -85,14 +89,19 @@
                 return(null);
             }
             function replaceWelcomeText(){
-                document.getElementById('welcome-text').innerHTML='Hello, person from ' + decodeURIComponent(getQueryVariable("from")) + '!';
+                if (getQueryVariable("from") == null){
+                    document.getElementById('welcome-text').innerHTML='Hello, person!';
+                } else {
+                    document.getElementById('welcome-text').innerHTML='Hello, person from ' + decodeURIComponent(getQueryVariable("from")) + '!';
+                }
+                
             }
         </script>
     </head>
     <body onload="replaceWelcomeText()">
-        <main>
+        <div id="main">
             <img id="logo" src="../resources/ezlambry%20logo%20red.png" alt="Ezlambry">
-            <p id="welcome-text" class="heading"></p>
+            <p id="welcome-text" class="heading">Hello, person!</p>
             <p>Now you might be wondering who this person named Ezlambry is.<br>Ezlambry makes YouTube videos and streams of him playing a variety of different video games!<br>Most of the time he plays Nintendo games, but he sometimes plays other games too.</p><br>
             <div id="section-2">
                 <p class="heading">Some of Ezlambry's videos!</p>
@@ -102,7 +111,7 @@
                 <iframe class="yt-vid" src="https://www.youtube.com/embed/RagpWg19x2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p class="heading">Like my videos?</p>
-            <p>If you like my content, don't forget to subscribe to my channel on YouTube!</p>
+            <p>If you like my content, make sure to subscribe to my channel on YouTube!</p>
             <script src="https://apis.google.com/js/platform.js"></script><div class="g-ytsubscribe" data-channelid="UCrDdkZMtIGymSLoWsyWTBcA" data-layout="full" data-count="default"></div><br>
             <p>You can also find me at these places:</p>
             <div id="social-medias">
@@ -113,6 +122,6 @@
                 <a href="https://ezlambry.github.io"><img src="../resources/ez%20v3.1%20user%20icon.png" alt="Website"></a>
             </div>
             <p id="footer-text">Website designed by Ezlambry, 2018</p>
-        </main>
+        </div>
     </body>
 </html>
