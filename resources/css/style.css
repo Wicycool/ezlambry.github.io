@@ -1,45 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #181818 !important;
+        color: white !important;
+    }
+}
+#header-space{
+    height: 80px;
+}
 body{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     background-color: white;
-}
-#header{
-    background-color: #F8F8F8;
-    width: calc(100% - 20px);
-    height: 60px;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    box-shadow: 0 0 4px rgba(0,0,0,.5);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    
-}
-#header a:link {
-    color: #FF3334;
-    text-decoration: none;
-}
-#header a:visited {
-    color: #FF3334;
-    text-decoration: none;
-}
-#header a:hover {
-    color: #FE2725;
-    text-decoration: underline;
-}
-#header a:active {
-    color: #FE2725;
-    text-decoration: underline;
-}
-
-#header-space{
-    height: 80px;
-}
-.header-logo{
-    height: 40px;
-    padding: 0;
 }
 #main,.main{
     margin: auto;
