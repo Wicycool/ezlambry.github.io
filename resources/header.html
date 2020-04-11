@@ -4,22 +4,65 @@
         <title>Ezlambry - </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+            @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
             html,body{
                 font-family: 'Open Sans', sans-serif;
                 margin:0;
                 padding:0;
             }
-            @media only screen and (max-width: 400px) {
-                a{
-                    margin-left: 0 !important;
+            /*---MOBILE NAVIGATION BAR---*/
+            @media only screen and (max-width: 420px) {
+                #link-container a{
+                    /*margin-left: 0 !important;
                     margin-right: 0 !important;
-                    font-size: .9em;
+                    font-size: .9em;*/
+                    display: inline-block;
+                    width: 25%;
+                    margin: 0;
+                    padding-top: 55px;
+                    font-size: 14px;
+                    height: 25px;
+                    vertical-align: middle;
+                    background-size: auto 28px;
+                    background-repeat: no-repeat;
+                    background-position: center 20px;
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+                #link-container a:active{
+                    background-color: #0002;
+                }
+                #link-container a:nth-child(1){background-image: url(icons/home-black-24dp.svg);}
+                #link-container a:nth-child(2){background-image: url(icons/info-black-24dp.svg);}
+                #link-container a:nth-child(3){background-image: url(icons/chat-24px.svg);}
+                #link-container a:nth-child(4){
+                    background-image: url(icons/ez-icon.png);
+                    background-size: 36px;
+                    background-position: center 16px;
+                }
+                #link-container{
+                    font-size: 0;
+                }
+                #header{
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    width: 100% !important;
+                    height: 80px !important;
+                    bottom: 0;
+                    border-bottom-left-radius: 0 !important;
+                    border-bottom-right-radius: 0 !important;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+                .header-logo, #logo-link, br{
+                    display: none;
                 }
             }
             a{
                 margin-left: 5px;
                 margin-right: 5px;
+                font-family: 'Lato', sans-serif;
             }
             #header{
                 background-color: #F8F8F8;
@@ -36,18 +79,22 @@
             #header a:link {
                 color: #FF3334;
                 text-decoration: none;
+                opacity: 1;
             }
             #header a:visited {
                 color: #FF3334;
                 text-decoration: none;
+                opacity: 1;
             }
             #header a:hover {
                 color: #FE2725;
-                text-decoration: underline;
+                text-decoration: none;
+                opacity: .8;
             }
             #header a:active {
                 color: #FE2725;
-                text-decoration: underline;
+                text-decoration: none;
+                opacity: .8;
             }
             .header-logo{
                 height: 40px;
@@ -63,12 +110,14 @@
     </head>
     <body style="background-color: transparent;">
         <div id="header">
-            <a href="../" target="_parent"><img class="header-logo" src="../resources/ezlambry%20logo%20red.png"></a>
+            <a href="../" target="_parent" id="logo-link"><img class="header-logo" src="../resources/ezlambry%20logo%20red.png"></a>
             <br>
-            <a href="../" target="_parent">Home</a>
-            <a href="../about/" target="_parent">About</a>
-            <a href="../joindiscord/" target="_parent">Discord</a>
-            <a href="../branding" target="_parent">Branding</a>
+            <div id="link-container">
+                <a href="../" target="_parent">Home</a>
+                <a href="../about/" target="_parent">About</a>
+                <a href="../joindiscord/" target="_parent">Discord</a>
+                <a href="../branding" target="_parent">Branding</a>
+            </div>
         </div>
     </body>
 </html>

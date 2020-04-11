@@ -1,9 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #181818 !important;
         color: white !important;
+    }
+}
+@media only screen and (max-width: 420px) {
+    #iframe-header{
+        bottom: 0 !important;
+    }
+    html{
+        padding-bottom: 80px;
+    }
+    #header-space{
+        height: 60px !important;
+        background-image:url(../../resources/ezlambry%20logo%20red.png);
+        background-size: auto 40px;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 #header-space{
@@ -12,8 +27,11 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: white;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
 }
 #main,.main{
     margin: auto;

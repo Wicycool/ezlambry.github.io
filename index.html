@@ -26,7 +26,7 @@
                 background-image: url('resources/shade.png'), var(--image);
                 background-size: cover, cover;
                 background-position: center;
-                
+                font-family: 'Montserrat', sans-serif;
             }
             .gallery-box span{
                 position: absolute;
@@ -34,19 +34,39 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+            #banner{
+                background-image:  url('resources/ez%20v3.1%20original%20shadow.png'), url('resources/Pixel%20Background.png');
+                height: 350px;
+                background-position: center, center;
+                background-repeat: no-repeat, no-repeat;
+                background-size: 250px, cover;
+            }
+            #social-medias img{
+                border-radius: 8px;
+                margin-right: 4px;
+                width: 48px;
+            }
         </style>
     </head>
     <body>
         <iframe id="iframe-header" src="resources/header.html" seamless></iframe>
         <div id="header-space" style="height: 70px"></div>
-        <div id="banner" style="background-image: url('resources/Ezlambry%20channel%20art.jpg');height: 350px"></div>
+        <div id="banner"></div>
         <div id="main">
             <h1>Welcome to Ezlambry's Website!</h1>
-            <p>Now you're probably wondering: "Why does Ezlambry have a website?"
-            <br>The answer is that he doesn't know. He just felt like making one! :P (cool, right?)</p>
-            <p><a href="https://www.youtube.com/channel/UCrDdkZMtIGymSLoWsyWTBcA">Check out Ezlambry's YouTube channel</a> (he makes cool videos!)</p>
+            <p>This is the official website for Ezlambry related things! There's not a lot of things here, but you can find my stuff at some of the links below!</p>
+            <br>
+            <h2>Find me at these places:</h2>
+            <div id="social-medias">
+                <a href="https://www.youtube.com/Ezlambry"><img src="landing/youtube_social_square_red.png" alt="YouTube"></a>
+                <a href="https://twitter.com/Ezlambry"><img src="landing/Twitter_Social_Icon_Square_Color.png" alt="Twitter"></a>
+                <a href="https://ezlambry.github.io/joindiscord"><img src="landing/discord.png" alt="Discord"></a>
+                <a href="https://twitch.tv/ezlambry_"><img src="landing/twitch.png" alt="Twitch"></a>
+                <a href="https://ezlambry.github.io"><img src="resources/ez%20v3.2%20user%20icon.png" alt="Website"></a>
+            </div>
+            <br><br>
+            <h2>Check out some of my stuff:</h2>
             <div id="gallery-container">
-                <h1>Check out some of my stuff!</h1>
                 <a href="https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl7TSChtAbEqPjQ8UzAYb4Ks"><div class=gallery-box style="--image: url('resources/gallery-images/default.jpg');"><span>EzStream</span></div></a><a href="https://www.youtube.com/channel/UCrDdkZMtIGymSLoWsyWTBcA/videos"><div class=gallery-box style="--image: url('resources/gallery-images/beescute.jpg');">
                 <span>Videos</span></div></a><a href="https://www.youtube.com/playlist?list=PLQ7FZ3d0mAl5NW1-am3BwbpfgQqz6V2jq"><div class=gallery-box style="--image: url('resources/gallery-images/nicekirb.jpg');">
                 <span>Memes</span></div></a><a href="https://twitter.com/ezlambry"><div class="gallery-box" style="--image: url('resources/gallery-images/twitter.jpg')"><span>Twitter</span></div></a><a href="https://twitch.tv/ezlambry_"><div class="gallery-box" style="--image: url('resources/gallery-images/twitch.jfif')"><span>Twitch</span></div></a><a href="https://scratch.mit.edu/users/ezlambry/"><div class=gallery-box style="--image: url('resources/gallery-images/ezos.png');">
